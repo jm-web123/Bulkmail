@@ -5,13 +5,13 @@ const mongoose = require("mongoose")
 
 const app = express()
 
-app.use(cors())
+app.use(cors());
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://Manjupriya:1992@cluster0.oebpzwd.mongodb.net/passkey?retryWrites=true&w=majority&appName=Cluster0" ).then(function(){
-  console.log("Coonect to DB")
-}).catch(function(){
-  console.log("Failed to connect DB")
+mongoose.connect("mongodb+srv://manjupriyaj95:1992@cluster0.9phszst.mongodb.net/passkey?retryWrites=true&w=majority&appName=Cluster0").then(function(){
+  console.log("Connect to DB")
+}).catch(function(error){
+  console.log("Failed to connect DB",error)
 })
 
 const credential = mongoose.model("credential",{},"bulkmail")
